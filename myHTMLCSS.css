@@ -1,0 +1,443 @@
+html,
+body {
+    background: #e1e5eb;
+    font-size: 14px;
+    font-family: Play, "微软雅黑", "Microsoft YaHei UI", "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    cursor: url("img/shubiao.ico"), default;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: url("img/left-bottom.jpg") no-repeat fixed top left, url("img/right-top.jpg") no-repeat fixed top right, #f0f2f7;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: url("img/shubiao2.ico"), default;
+}
+
+
+/*导航*/
+
+#main-nav {
+    height: 58px;
+    max-height: 58px;
+    width: calc(100% - 80px) !important;
+    max-width: 1680px !important;
+    margin: 0 auto;
+}
+
+.logo {
+    float: left;
+    line-height: 58px;
+    padding-left: 18px;
+    font-size: 28px;
+    font-weight: bold;
+    opacity: 0.5;
+}
+
+
+/*导航行右侧*/
+
+.row {
+    float: right;
+    line-height: 58px;
+    max-height: 58px;
+    padding-right: 18px;
+}
+
+
+/*导航列表*/
+
+.nav-list {
+    float: left;
+}
+
+
+/*导航列表ul*/
+
+.nav-list-items {
+    margin: 0;
+}
+
+
+/*列表行显示*/
+
+.nav-list-items>li {
+    display: inline-block;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 28px;
+}
+
+
+/*列表a标签字体颜色*/
+
+.nav-list-items>li>a {
+    color: #738192;
+}
+
+
+/*移动到列表a标签的字体颜色*/
+
+.nav-list-items>li:hover>a {
+    color: #20a0ff;
+}
+
+.fas {
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 58px;
+    font-family: FontAwesome;
+    font-weight: 900;
+}
+
+
+/*列表前面添加图片符号*/
+
+.fa-home::before {
+    content: "\f015";
+}
+
+.fa-footPrint::before {
+    content: "\f302";
+}
+
+.fa-message::before {
+    content: "\f5ad";
+}
+
+.fa-friendship::before {
+    content: "\f0c6";
+}
+
+.fa-host::before {
+    content: "\f1fa";
+}
+
+.fa-searchBox::before {
+    content: "\f002";
+}
+
+.hr-style {
+    border: 1px solid #f0f2f7;
+    box-shadow: 0px 1px #d8e0ea, 0px 0px transparent, 0px 2px rgba(255, 255, 255, 1);
+}
+
+#wrapper {
+    width: calc(100% - 80px) !important;
+    max-width: 1680px !important;
+    margin: 0 auto;
+}
+
+.showBox {
+    height: 350px;
+    /* width: calc(100% - 80px) !important;
+    max-width: 1680px !important; */
+    margin: 20px auto;
+    border-radius: 13px;
+    background-color: #475669;
+    box-shadow: 0 15px 20px rgba(31, 45, 61, .2);
+    transition: 0.5s;
+}
+
+.content {
+    height: 350px;
+    width: calc(93.5% - 800px);
+    padding-left: 6.5%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #FFF;
+}
+
+.content h2 {
+    font-size: 28px;
+}
+
+.image {
+    height: 350px;
+    width: 800px;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.card {
+    width: 280px;
+    height: 250px;
+    border-radius: 13px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+.fa-arrow-right::before {
+    content: "\f061";
+    padding-right: 5px;
+}
+
+.read-more {
+    width: 104px;
+    height: 34px;
+    line-height: 34px;
+    border: 1px solid rgba(255, 255, 255, .3);
+    border-radius: 13px;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .2);
+    text-align: center;
+    padding: auto;
+}
+
+.read-more a {
+    color: #FFF;
+}
+
+.article-nav {
+    padding-bottom: 15px;
+}
+
+.user-logo {
+    float: right;
+    height: 38px;
+    width: 38px;
+    line-height: 38px;
+    text-align: center;
+    color: #20a0ff;
+    background-color: #fff;
+    border: 1.5px solid #e0e4ec;
+    box-shadow: 0 1px rgba(255, 255, 255, .5), 0 1px 1px rgba(0, 0, 0, .15);
+    border-radius: 100%;
+}
+
+.article-nav::after,
+.article-nav::before {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.article-nav-list {
+    float: left;
+    margin: 0;
+    padding-left: 0;
+}
+
+.article-nav-list li {
+    display: inline-block;
+}
+
+.article-nav-list a {
+    display: block;
+    color: #738192;
+    padding: 0 15px;
+    height: 38px;
+    line-height: 38px;
+}
+
+.article-nav-list .first-li {
+    padding-left: 0;
+}
+
+.fa-lightbulb::before {
+    content: "\f0eb";
+}
+
+.fa-folder-open::before {
+    content: "\f07c";
+}
+
+.fa-external-link-alt::before {
+    content: "\f35d";
+}
+
+.fa-pen-nib::before {
+    content: "\f5ad";
+}
+
+.fa-book::before {
+    content: "\f02d";
+}
+
+.fa-video::before {
+    content: "\f03d";
+}
+
+.container::after,
+.container::before {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.article {
+    float: left;
+    width: 80%;
+}
+
+.info {
+    float: right;
+    width: 20%;
+}
+
+.card-wrapper {
+    float: left;
+    box-sizing: border-box;
+    width: 25%;
+    padding-right: 15px;
+}
+
+.article-card {
+    box-sizing: border-box;
+    border-radius: 13px;
+    margin-bottom: 15px;
+    margin-left: 0;
+    padding-bottom: 100%;
+    background-color: #FFF;
+    background-position: center;
+    background-size: cover;
+    display: block;
+    background-repeat: no-repeat;
+}
+
+.card-wrapper:nth-child(1) .article-card {
+    background-image: url(https://cdn.fengwanqing.xin/wp-content/uploads/2020/03/1585136268-YrTdakDwzEnI.jpg);
+}
+
+.card-wrapper:nth-child(2) .article-card {
+    background-image: url(https://cdn.fengwanqing.xin/wp-content/uploads/2020/03/1585136268-YrTdakDwzEnI.jpg);
+}
+
+.card-wrapper:nth-child(3) .article-card {
+    background-image: url(https://cdn.fengwanqing.xin/wp-content/uploads/2020/03/1585136268-YrTdakDwzEnI.jpg);
+}
+
+.card-wrapper:nth-child(4) .article-card {
+    background-image: url(https://cdn.fengwanqing.xin/wp-content/uploads/2020/03/1585136268-YrTdakDwzEnI.jpg);
+}
+
+.card-wrapper:nth-child(5) .article-card {
+    background-image: url(https://cdn.fengwanqing.xin/wp-content/uploads/2020/03/1585136268-YrTdakDwzEnI.jpg);
+}
+
+.card-wrapper:nth-child(6) .article-card {
+    background-image: url(https://cdn.fengwanqing.xin/wp-content/uploads/2020/03/1585136268-YrTdakDwzEnI.jpg);
+}
+
+.info {
+    box-sizing: border-box;
+    padding: 30px;
+}
+
+.info h2 {
+    font-weight: 400;
+    font-size: 16px;
+    color: #738192;
+    margin-bottom: 0px;
+}
+
+.contact-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.contact-list li {
+    padding-bottom: 15px;
+}
+
+.contact-list li a {
+    color: #738195;
+    font-size: 15px;
+}
+
+.nav-list-items>li:hover>a {
+    color: #20a0ff;
+}
+
+.fa-weibo::before {
+    content: "\f18a";
+}
+
+.fa-github::before {
+    content: "\f09b";
+}
+
+.fa-qq::before {
+    content: "\f1d6";
+}
+
+.fa-weixin::before {
+    content: "\f1d7";
+}
+
+#footer {
+    background: #e1e5eb;
+    text-align: center;
+    line-height: 2em;
+    padding: 30px 0;
+    padding-bottom: 30px;
+    border-top: 1px solid #d3d8e0;
+    padding-bottom: calc(30px + env(safe-area-inset-bottom));
+    -webkit-box-shadow: 0 1px rgba(255, 255, 255, .5) inset;
+    box-shadow: 0 1px rgba(255, 255, 255, .5) inset;
+}
+
+.copy-right {
+    color: #738192;
+}
+
+.beian a {
+    color: #475669;
+    font-size: 12px;
+}
+
+
+/* .photo {
+    float: left;
+    height: 70px;
+    width: 70px;
+    background-image: url(img/013.jpg);
+    background-size: cover;
+    border-radius: 13px;
+} */
+
+.user-info img {
+    float: left;
+    height: 70px;
+    width: 70px;
+    border-radius: 13px;
+}
+
+.introduction {
+    float: left;
+    padding-left: 15px;
+}
+
+.user-info::after,
+.user-logo::before {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.name {
+    margin-top: 7px;
+    font-family: "Microsoft YaHei";
+    font-size: 18px;
+    color: #475669;
+}
+
+.description {
+    margin-top: 4px;
+    color: #738192;
+    font-size: 15px;
+}

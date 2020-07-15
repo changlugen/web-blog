@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        perspective: 800px;
+    }
+    
+    section {
+        position: relative;
+        width: 280px;
+        height: 250px;
+        margin: 300px auto;
+        transform-style: preserve-3d;
+        /* animation: change 6s steps(12) infinite; */
+    }
+    
+    section div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    /* section div:nth-child(1) {
+        background-image: url('img/001.jpg');
+        background-size: cover;
+        transform: rotateY(0deg) translatez(300px);
+    }   
+    
+    section div:nth-child(2) {
+        background-image: url('img/002.jpg');
+        background-size: cover;
+        transform: rotateY(60deg) translatez(300px);
+    }
+    
+    section div:nth-child(3) {
+        background-image: url('img/003.jpg');
+        background-size: cover;
+        transform: rotateY(120deg) translatez(300px);
+    }
+    
+    section div:nth-child(4) {
+        background-image: url('img/004.jpg');
+        background-size: cover;
+        transform: rotateY(180deg) translatez(300px);
+    }
+    
+    section div:nth-child(5) {
+        background-image: url('img/005.jpg');
+        background-size: cover;
+        transform: rotateY(240deg) translatez(300px);
+    }
+    
+    section div:nth-child(6) {
+        background-image: url('img/006.jpg');
+        background-size: cover;
+        transform: rotateY(300deg) translatez(300px);
+    } */
+    
+    section div:nth-child(1) {
+        background-image: url('img/001.jpg');
+        background-size: cover;
+        transform: translateX(0) scaleX(1) rotateY(0deg) translateZ(0px) scaleY(1);
+    }
+    
+    section div:nth-child(2) {
+        background-image: url('img/002.jpg');
+        background-size: cover;
+        transform: translateX(-45%) scaleX(0.54) rotateY(45deg) translateZ(-150px) scaleY(0.95);
+    }
+    
+    section div:nth-child(3) {
+        background-image: url('img  /003.jpg');
+        background-size: cover;
+        transform: translateX(-60%) scaleX(0.51) rotateY(45deg) translateZ(-200px) scaleY(0.9);
+    }
+    
+    section div:nth-child(4) {
+        background-image: url('img/004.jpg');
+        background-size: cover;
+        transform: translateX(-65%) scaleX(0.48) rotateY(45deg) translateZ(-300px) scaleY(0.85);
+    }
+    
+    section div:nth-child(5) {
+        background-image: url('img/005.jpg');
+        background-size: cover;
+        transform: translateX(65%) scaleX(0.48) rotateY(-45deg) translateZ(-300px) scaleY(0.85);
+    }
+    
+    section div:nth-child(6) {
+        background-image: url('img/006.jpg');
+        background-size: cover;
+        transform: translateX(60%) scaleX(0.51) rotateY(-45deg) translateZ(-200px) scaleY(0.9);
+    }
+    
+    section div:nth-child(7) {
+        background-image: url('img/007.jpg');
+        background-size: cover;
+        transform: translateX(45%) scaleX(0.54) rotateY(-45deg) translateZ(-150px) scaleY(0.95);
+    }
+    
+    @keyframes change {
+        0% {
+            transform: translateX(0) translateZ(0px) scaleX(1) rotateY(0deg) scaleY(1);
+        }
+        16.6% {
+            transform: translateX(-45%) translateZ(-150px) scaleX(0.54) rotateY(45deg) scaleY(0.95);
+        }
+        33.2% {
+            transform: translateX(-60%) translateZ(-200px) scaleX(0.51) rotateY(45deg) scaleY(0.9);
+        }
+        49.8% {
+            transform: translateX(-65%) translateZ(-300px) scaleX(0.48) rotateY(45deg) scaleY(0.85);
+        }
+        66.4% {
+            transform: translateX(65%) translateZ(-300px) scaleX(0.48) rotateY(-45deg) scaleY(0.85);
+        }
+        83% {
+            transform: translateX(60%) translateZ(-200px) scaleX(0.51) rotateY(-45deg) scaleY(0.9);
+        }
+        100% {
+            transform: translateX(45%) translateZ(-150px) scaleX(0.54) rotateY(-45deg) scaleY(0.95);
+        }
+    }
+</style>
+
+<body>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+    </div>
+</body>
+
+</html>

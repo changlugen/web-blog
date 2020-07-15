@@ -1,0 +1,175 @@
+<html>
+<head>
+<title>我的第一个 HTML 页面</title>
+<style>
+    body{
+        margin: 0px;
+        /*background-color: black;*/
+        /*color: white;*/
+    }
+/*    body a:hover,a:focus {
+       background-color: transparent;
+       border-bottom-color: #a9a9a9;
+       border-bottom-color: rgba(255,255,255,.25);
+    }*/
+    body nav ul li {
+        display: inline-block;
+    }
+    aside {
+        float: left;
+    }
+    article {
+        float: left;
+    }
+    article section {
+        float: left;
+    }
+    .title {
+        width: 100%;
+        height: 5%;
+        font-size: 18px;
+    }
+    .menu {
+        width: 100%;
+        height: 5%;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: right;
+        margin-right: 100px;
+        display: block;
+    }
+    #menu-list {
+        margin-right: 100px;
+    }
+    .aside-menu {
+        width: 20%;
+        height: 65%;
+        text-align: center;
+    }
+    .article {
+        width: 80%;
+        height: 65%;
+        display: block;
+        vertical-align: middle;
+    }
+    .summary {
+        clear: both;
+        width: 100%;
+        height: 20%;
+        margin-left: 50px;
+    }
+    .foot {
+        width: 100%;
+        height: 5%;
+        text-align: center;
+        font-weight: bold;
+    }
+    #article-header{
+        text-align: center;
+    }
+    #article-nav-list {
+        text-align: center;
+    }
+    #menu-list li+li {
+        margin-left: 100px;
+    }
+    #article-nav-list li+li {
+        text-align: center;
+        margin-left: 50px;
+    }
+    #aside-list {
+        text-align: center;
+        line-height: 30px;
+    }
+    article section {
+        width: calc((80%/2));
+        /*height: auto;*/
+        text-align:center;
+        display: block;
+        /*margin: 0 auto;*/
+        margin-left: 20%;
+    }
+    article section+section {
+        text-align:center;
+        display: block;
+        margin: 0 auto;
+    }
+
+</style>
+</head>
+<body>
+    <header class="title" style="text-align: center;">
+        <h1>header后面一般紧跟一个标题</h1>
+    </header>
+    <nav class="menu">
+        <ul id="menu-list">
+            <li><a href="#">导航1</a></li>
+            <li><a href="#">导航2</a></li>
+            <li><a href="#">导航3</a></li>
+        </ul>
+    </nav>
+    <aside class="aside-menu">
+        <nav>
+            <h2>asdie标题</h2>
+            <ul id="aside-list">
+            <li><a href="#">侧栏导航1</a></li><br/>
+            <li><a href="#">侧栏导航2</a></li><br/>
+            <li><a href="#">侧栏导航3</a></li><br/>
+            </ul>
+        </nav>
+    </aside>
+    <article class="article">
+        <header>
+            <h1 id="article-header">article标题</h1>
+              <nav id="article-nav">
+                <ul id="article-nav-list">
+                  <li><a href="#">article导航1</a></li>
+                  <li><a href="#">article导航2</a></li>
+                  <li><a href="#">article导航3</a></li>
+                </ul>
+              </nav>
+        </header>
+        <section>
+            <article>
+                <header>
+                    <h2>section1标题</h2>
+                    <p><time pubdate datetime="2020-06-08">2020-06-08</time></p>
+                </header>
+                <p>内容1</p>
+                <figure>
+                    <p>文档内的插图</p>
+                    <img src="#" width="100px" height="100px" alt="插图1">
+                </figure>
+                <footer>
+                    <p><a href="#">一键转发</a></p>
+                </footer>
+            </article>
+        </section>
+        <section>
+            <article>
+                <header>
+                    <h2>section2标题</h2>
+                    <p><time pubdate datetime="2020-06-08">2020-06-08</time></p>
+                </header>
+                <p>内容2</p>
+                <figure>
+                    <p>文档内的插图</p>
+                    <img src="#" width="100px" height="100px" alt="插图2">
+                </figure>
+                <footer>
+                    <p><a href="#">一键转发</a></p>
+                </footer>
+            </article>
+        </section>
+    </article>
+    <div class="summary">
+        <p>总结：在H5中，article元素可以看成是一种特殊类型的section元素，它比section元素更强调独立性。即section元素强调分段或分块，而article强调独立性。</p>
+        <p>具体来说，如果一块内容相对来说比较独立的、完整的时候，应该使用article元素，但是如果你想将一块内容分成几段的时候，应该使用section元素。</p>
+        <p>另外，在HTML5中，div元素变成了一种容器，当使用CSS样式的时候，可以对这个容器进行一个总体的CSS样式的套用。</p>
+        <p>所以，作为布局以及样式化使用，&lt;div&gt;比&lt;article&gt;和&lt;section&gt;更加合适。</p>
+    </div>
+    <footer class="foot">
+        <P><small>这是底部</small></p>
+    </footer>
+</body>
+</html>
