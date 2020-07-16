@@ -26,6 +26,11 @@ body {
     margin: 0 auto;
 }
 
+ul,
+li {
+    list-style-type: none;
+}
+
 a {
     text-decoration: none;
     color: #738192;
@@ -36,6 +41,17 @@ a:hover {
     color: #20a0ff;
 }
 
+.clearFix:after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearFix {
+    *zoom: 1;
+}
+
 
 /* 导航栏 start  */
 
@@ -44,8 +60,9 @@ a:hover {
     width: 100%;
     top: 0;
     left: 0px;
+    background-color: #f0f2f7;
     opacity: 1;
-    z-index: 0;
+    z-index: 999;
 }
 
 .header {
@@ -94,7 +111,6 @@ a:hover {
 
 .navBar ul li {
     float: left;
-    list-style-type: none;
 }
 
 .navBar ul li a {
@@ -173,7 +189,17 @@ a:hover {
     justify-content: center;
     width: calc(100% - 800px);
     height: 350px;
-    padding-left: 6.5%;
+    padding-left: 8.5%;
+}
+
+.category::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 1px;
+    margin-top: 5px;
+    background: currentColor;
+    opacity: 0.3;
 }
 
 .category a {
@@ -217,7 +243,6 @@ a:hover {
     background-size: cover;
     background-repeat: no-repeat;
     box-shadow: 0 5px 15px rgba(0, 0, 0, .4), -50px 0 30px -20px rgba(0, 0, 0, .2);
-    /* opacity: 0.5; */
     transition: 0.7s;
 }
 
@@ -232,7 +257,7 @@ a:hover {
 
 .past0 .card {
     background-image: url(https://cdn.fengwanqing.xin/wp-content/uploads/2018/11/wallhaven-j89emq_512x458.png);
-    transform: translateX(-45%) scaleX(0.54) rotateY(45deg) translateZ(-150px) scaleY(0.95);
+    transform: translateX(-45%) scaleX(0.54) rotateY(45deg) translateZ(-150px) scaleY(0.9);
 }
 
 .past0 {
@@ -241,7 +266,8 @@ a:hover {
 
 .past1 .card {
     background-image: url(https://cdn.fengwanqing.xin/wp-content/uploads/2018/11/wallhaven-j89emq_512x458.png);
-    transform: translateX(-60%) scaleX(0.51) rotateY(45deg) translateZ(-200px) scaleY(0.9);
+    transform: translateX(-60%) scaleX(0.51) rotateY(45deg) translateZ(-200px) scaleY(0.85);
+    opacity: 0.5;
 }
 
 .past1 {
@@ -250,7 +276,8 @@ a:hover {
 
 .past2 .card {
     background-image: url(https://cdn.fengwanqing.xin/wp-content/uploads/2018/11/wallhaven-j89emq_512x458.png);
-    transform: translateX(-65%) scaleX(0.48) rotateY(45deg) translateZ(-300px) scaleY(0.85);
+    transform: translateX(-45%) scaleX(0.48) rotateY(45deg) translateZ(-300px) scaleY(0.8);
+    opacity: 0.5;
 }
 
 .past2 {
@@ -259,7 +286,8 @@ a:hover {
 
 .future2 .card {
     background-image: url(https://cdn.fengwanqing.xin/wp-content/uploads/2018/11/wallhaven-j89emq_512x458.png);
-    transform: translateX(65%) scaleX(0.48) rotateY(-45deg) translateZ(-300px) scaleY(0.85);
+    transform: translateX(45%) scaleX(0.48) rotateY(-45deg) translateZ(-300px) scaleY(0.8);
+    opacity: 0.5;
 }
 
 .future2 {
@@ -268,7 +296,8 @@ a:hover {
 
 .future1 .card {
     background-image: url(https://cdn.fengwanqing.xin/wp-content/uploads/2018/11/wallhaven-j89emq_512x458.png);
-    transform: translateX(60%) scaleX(0.51) rotateY(-45deg) translateZ(-200px) scaleY(0.9);
+    transform: translateX(60%) scaleX(0.51) rotateY(-45deg) translateZ(-200px) scaleY(0.85);
+    opacity: 0.5;
 }
 
 .future1 {
@@ -277,7 +306,7 @@ a:hover {
 
 .future0 .card {
     background-image: url(https://cdn.fengwanqing.xin/wp-content/uploads/2018/11/wallhaven-j89emq_512x458.png);
-    transform: translateX(45%) scaleX(0.54) rotateY(-45deg) translateZ(-150px) scaleY(0.95);
+    transform: translateX(45%) scaleX(0.54) rotateY(-45deg) translateZ(-150px) scaleY(0.9);
 }
 
 .future0 {
@@ -285,10 +314,359 @@ a:hover {
 }
 
 
-/* 
-.current,
-.past0,
-.past1 .past2 {} */
-
-
 /* 轮播图 end */
+
+
+/* 文章导航栏 start */
+
+.articleNav {
+    width: 100%;
+    height: 38px;
+    line-height: 38px;
+    margin: 20px auto;
+}
+
+.artcleCategory {
+    float: left;
+}
+
+.artcleCategory ul li {
+    float: left;
+}
+
+.artcleCategory ul li a {
+    display: block;
+    height: 38px;
+    padding: 0 15px;
+    border-radius: 20px;
+}
+
+.artcleCategory ul li:nth-child(n+2) a:hover {
+    background-color: rgb(213, 228, 243);
+}
+
+.artcleCategory ul li:first-child a {
+    background-color: #20a0ff;
+    color: #fff;
+}
+
+.personalButton {
+    float: right;
+    width: 38px;
+    height: 38px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .15);
+    box-shadow: 0 6px 6px rgba(31, 45, 61, .05), 0 10px 10px rgba(31, 45, 61, .15), 0 -1px 2px rgba(255, 255, 255, .5) inset;
+}
+
+.personalButton a {
+    color: #20a0ff;
+}
+
+
+/* 文章导航栏 end */
+
+
+/* 文章卡片 start */
+
+.articleCards {
+    float: left;
+    width: 80%;
+}
+
+.cardsList li {
+    display: block;
+    float: left;
+    width: 25%;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    border-radius: 13px;
+}
+
+.cardsList li a {
+    display: block;
+    padding-bottom: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 13px;
+    box-shadow: 0 13px 15px rgba(31, 45, 61, .15);
+}
+
+.cardsList li:nth-child(1) a {
+    background-image: url(https://cdn.fengwanqing.xin/wp-content/uploads/2020/03/1585136268-YrTdakDwzEnI.jpg);
+}
+
+.cardsList li:nth-child(2) a {
+    background-image: url(https://cdn.fengwanqing.xin/wp-content/uploads/2020/03/1584712657-IT2WY9d8bpfD.jpg);
+}
+
+.cardsList li:nth-child(3) a {
+    background-image: url(https://cdn.fengwanqing.xin/wp-content/uploads/2019/04/1583377820-4JSI0y3L6Onv.png);
+}
+
+.cardsList li:nth-child(4) a {
+    background-image: url(https://cdn.fengwanqing.xin/wp-content/uploads/2018/10/wallhaven-83r6kj_512x458.png);
+}
+
+.cardsList li:nth-child(5) a {
+    background-image: url(https://cdn.fengwanqing.xin/wp-content/uploads/2020/03/1585136268-YrTdakDwzEnI.jpg);
+}
+
+.cardsList li:nth-child(6) a {
+    background-image: url(https://cdn.fengwanqing.xin/wp-content/uploads/2020/03/1584712657-IT2WY9d8bpfD.jpg);
+}
+
+.cardsList li:nth-child(7) a {
+    background-image: url(https://cdn.fengwanqing.xin/wp-content/uploads/2019/04/1583377820-4JSI0y3L6Onv.png);
+}
+
+.cardsList li:nth-child(8) a {
+    background-image: url(https://cdn.fengwanqing.xin/wp-content/uploads/2018/10/wallhaven-83r6kj_512x458.png);
+}
+
+.more {
+    width: 100%;
+    height: 75px;
+    text-align: center;
+    background: linear-gradient(90deg, rgba(202, 209, 219, 0), rgba(202, 209, 219, 1), rgba(202, 209, 219, 0)) 0 0/100% 1px no-repeat, linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, .5), rgba(255, 255, 255, 0)) 0 1px/100% 1px no-repeat, radial-gradient(ellipse 50% 50% at 50% 0, rgba(202, 209, 219, .6), rgba(202, 209, 219, 0)) 0 2px no-repeat;
+}
+
+.more a {
+    display: inline-block;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 10px;
+    font-size: 12px;
+    color: #fff;
+    background: linear-gradient(#D3DCE6, #99A9BF 23%, #99A9BF 50%, #C0CCDA);
+    border-radius: 0 0 4px 4px;
+    text-shadow: 0 -1px rgba(31, 45, 61, .35);
+    box-shadow: 0 -1px rgba(255, 255, 255, .35) inset, 1px 0 rgba(255, 255, 255, .35) inset, -1px 0 rgba(255, 255, 255, .35) inset, 0 3px 5px rgba(31, 45, 61, .2);
+    transition: .25s;
+}
+
+.more a:hover {
+    height: 40px;
+}
+
+.more a i {
+    font-size: 12px;
+    padding-left: 5px;
+}
+
+.personalInformation {
+    float: right;
+    width: 20%;
+}
+
+.author {
+    float: left;
+    width: 70px;
+    height: 70px;
+    background-image: url(../img/013.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 13px;
+    box-shadow: 0 13px 15px rgba(0, 0, 0, .13);
+}
+
+.meta {
+    float: left;
+    padding-left: 18px;
+}
+
+.meta h2 {
+    margin-top: 7px;
+    color: #475669;
+    font-size: 18px;
+}
+
+.meta p {
+    margin-top: 4px;
+    color: #738192;
+}
+
+.information,
+.mood {
+    margin-top: 30px;
+}
+
+.follow,
+.moodTitle {
+    position: relative;
+    padding-bottom: 8px;
+    font-size: 15px;
+    border-bottom: 1px solid #d8e0ea;
+    box-shadow: 0 1px rgba(255, 255, 255, .5);
+    transition: .25s;
+}
+
+.follow::after,
+.moodTitle::after {
+    position: absolute;
+    left: 0px;
+    bottom: -2px;
+    content: "";
+    display: block;
+    width: 30px;
+    height: 3px;
+    border-radius: 3px;
+    background: linear-gradient(#58B7FF 30%, #20a0ff 70%);
+    box-shadow: 0 3px 4px rgba(32, 160, 255, .5);
+    transition: .25s;
+}
+
+.information:hover .follow::after,
+.mood:hover .moodTitle::after {
+    width: 45px;
+}
+
+.information:hover .follow,
+.mood:hover .moodTitle {
+    color: #20a0ff;
+}
+
+.contact {
+    display: block;
+    padding: 9px;
+    padding-left: 0px;
+}
+
+.contact li {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+}
+
+.contact li a i::before {
+    padding-right: 8px;
+}
+
+.contact li a,
+.contact li a i {
+    font-size: 16px;
+}
+
+.contact li a:hover i {
+    scale: 1.01;
+    transition: .5s cubic-bezier(.3, 60, .5, 1), color .25s;
+}
+
+.moodDetail {
+    position: relative;
+    display: block;
+    margin: 16px 0px 16px 16px;
+    padding-bottom: 20px;
+    border-left: 1px solid #cad1db;
+}
+
+.moodDetail::before,
+.moodDetail::after {
+    position: absolute;
+    /* top: 0px; */
+    left: -5px;
+    display: block;
+    content: "";
+    width: 9px;
+    height: 9px;
+    background: linear-gradient(#98a3b3, #d8e0ea);
+    box-shadow: 0 0 0 1px #a4b2c6 inset, 0 0 0 2px #d8e0ea inset, 0 4px 3px rgba(166, 180, 199, .4);
+    border-radius: 50%;
+}
+
+.moodDetail::before {
+    top: 0;
+}
+
+.moodDetail::after {
+    bottom: 0;
+}
+
+.moodDetail li {
+    position: relative;
+    margin: 5px 15px;
+}
+
+.moodDetail li:hover .moodDate span {
+    transform: translateY(1px);
+    transition: .25s;
+    opacity: 1;
+}
+
+.moodDetail li:hover .moodBody {
+    transform: translateY(5px);
+    transition: .25s;
+}
+
+.moodDate {
+    display: block;
+    height: 16px;
+}
+
+.moodDate span {
+    display: inline-block;
+    font-size: 12px;
+    transform: translateY(15px);
+    transition: .25px;
+    opacity: 0;
+}
+
+.moodBody {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+    padding: 5px 15px;
+    /* margin: 5px 15px; */
+    border: 1px solid #acbacc;
+    border-radius: 13px;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, .4) inset, 0 13px 15px rgba(31, 45, 61, .15);
+}
+
+.moodBody::before {
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #a6b4c7;
+    box-shadow: 0 0 0 1px #cad1db inset, 0 0 0 2px #f0f2f7 inset;
+}
+
+
+/* 文章卡片 end */
+
+
+/* 底部备案 start */
+
+.footer {
+    line-height: 2em;
+    padding: 30px 0;
+    text-align: center;
+    background: #e1e5eb;
+}
+
+.copyAllRight {
+    font-size: 12px;
+    /* color: #99a9bf; */
+}
+
+.beian a img {
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+}
+
+.beian a,
+.beian a span {
+    font-size: 12px;
+    color: #99a9bf;
+}
+
+
+/* 底部备案 end */
