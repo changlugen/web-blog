@@ -168,7 +168,9 @@ a:hover {
     border-radius: 13px;
     background-color: #475669;
     transition: z-index 0s ease .2s, opacity .5s, visibility .5s;
+    /* transform-style: preserve-3d; */
     z-index: 0;
+    /* perspective: 1000px; */
 }
 
 .current,
@@ -232,6 +234,7 @@ a:hover {
     -ms-flex-pack: center;
     justify-content: center;
     perspective: 450px;
+    transform-style: preserve-3d;
 }
 
 .card {
@@ -242,6 +245,7 @@ a:hover {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, .4), -50px 0 30px -20px rgba(0, 0, 0, .2);
     transition: 0.7s;
 }
@@ -251,67 +255,74 @@ a:hover {
     transform: translateX(0) scaleX(1) rotateY(0deg) translateZ(0px) scaleY(1);
 }
 
-.current {
+
+/* .current {
     z-index: 4;
-}
+} */
 
 .past0 .card {
     background-image: url(https://cdn.fengwanqing.xin/wp-content/uploads/2018/11/wallhaven-j89emq_512x458.png);
     transform: translateX(-45%) scaleX(0.54) rotateY(45deg) translateZ(-150px) scaleY(0.9);
 }
 
-.past0 {
+
+/* .past0 {
     z-index: 3;
-}
+} */
 
 .past1 .card {
     background-image: url(https://cdn.fengwanqing.xin/wp-content/uploads/2018/11/wallhaven-j89emq_512x458.png);
     transform: translateX(-60%) scaleX(0.51) rotateY(45deg) translateZ(-200px) scaleY(0.85);
-    opacity: 0.5;
+    /* opacity: 0.5; */
 }
 
-.past1 {
+
+/* .past1 {
     z-index: 2;
-}
+} */
 
 .past2 .card {
     background-image: url(https://cdn.fengwanqing.xin/wp-content/uploads/2018/11/wallhaven-j89emq_512x458.png);
     transform: translateX(-45%) scaleX(0.48) rotateY(45deg) translateZ(-300px) scaleY(0.8);
-    opacity: 0.5;
+    /* opacity: 0.5; */
 }
 
-.past2 {
+
+/* .past2 {
     z-index: 1;
-}
+} */
 
 .future2 .card {
     background-image: url(https://cdn.fengwanqing.xin/wp-content/uploads/2018/11/wallhaven-j89emq_512x458.png);
     transform: translateX(45%) scaleX(0.48) rotateY(-45deg) translateZ(-300px) scaleY(0.8);
-    opacity: 0.5;
+    /* opacity: 0.5; */
 }
 
-.future2 {
+
+/* .future2 {
     z-index: 1;
-}
+} */
 
 .future1 .card {
     background-image: url(https://cdn.fengwanqing.xin/wp-content/uploads/2018/11/wallhaven-j89emq_512x458.png);
     transform: translateX(60%) scaleX(0.51) rotateY(-45deg) translateZ(-200px) scaleY(0.85);
-    opacity: 0.5;
+    /* opacity: 0.5; */
 }
 
-.future1 {
+
+/* .future1 {
     z-index: 2;
-}
+} */
 
 .future0 .card {
     background-image: url(https://cdn.fengwanqing.xin/wp-content/uploads/2018/11/wallhaven-j89emq_512x458.png);
     transform: translateX(45%) scaleX(0.54) rotateY(-45deg) translateZ(-150px) scaleY(0.9);
 }
 
-.future0 {
+
+/* .future0 {
     z-index: 3;
-}
+} */
 
 
 /* 轮播图 end */
