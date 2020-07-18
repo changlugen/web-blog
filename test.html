@@ -4,172 +4,60 @@
 <head>
     <meta charset="utf-8">
     <title>轮播图</title>
-    <style type="text/css">
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        /*设置外部div*/
-        
-        #outer {
-            width: 447px;
-            height: 240px;
-            margin: 50px auto;
-            /*居中*/
-            background-color: #0FF;
-            /*设置背景颜色*/
-            padding: 10px 0;
-            position: relative;
-            /*父元素div开启相对定位*/
-            overflow: hidden;
-            /*裁剪溢出内容*/
-        }
-        /*设置ul*/
-        
-        #imgList {
-            list-style: none;
-            /*去除项目符合*/
-            position: absolute;
-            /*给ul开启绝对定位*/
-            left: 0px;
-            /*设置偏移量，每向左移动447px就会显示下一张图片*/
-        }
-        /*设置图片中的li*/
-        
-        #imgList li {
-            float: left;
-            /*设置浮动*/
-            margin: 0 10px;
-            /*设置左右外边距*/
-        }
-        /*设置导航按钮*/
-        
-        #navdiv {
-            position: absolute;
-            /*开启绝对定位*/
-            bottom: 15px;
-            /*设置位置*/
-        }
-        
-        #navdiv a {
-            float: left;
-            /*设置超链接浮动*/
-            width: 15px;
-            height: 15px;
-            background-color: #F00;
-            /*设置背景颜色*/
-            margin: 0 5px;
-            /*设置左右外边距*/
-            opacity: 0.5;
-            /*设置半透明*/
-            /*兼容IE8透明的写法为，filter:alpha(opacity=50)*/
-        }
-        /*设置鼠标移入的效果*/
-        
-        #navdiv a:hover {
-            background-color: #000;
-        }
-    </style>
-    <script type="text/javascript" src="myjs/dh.js"></script>
-    <script type="text/javascript">
-        window.function() {
-            //获取ul
-            var imgList = document.getElementById("imgList");
-            //获取页面中所有的图片(即获取img标签)
-            var imgarr = document.getElementsByTagName("img");
-            //设置imgList的宽度
-            imgList.style.width = 447 * imgarr.length + "px";
-            //设置导航按钮居中
-            //第一步获取导航div
-            var navdiv = document.getElementById("navdiv");
-            var outer = document.getElementById("outer");
-            //第二步设置left值，left=（outer的宽度-navdiv的宽度）/2
-            navdiv.style.left = (outer.offsetWidth - navdiv.offsetWidth) / 2 + "px";
-            //默认显示图片的的索引
-            var index = 0;
-            //获取所有的a
-            var alla = document.getElementsByTagName("a");
-            //设置默认选中的效果
-            alla[index].style.backgroundColor = "#000";
-            //点击超链接切换到指定图片，点击第一个超链接显示第一张图片，点击第二个超链接显示第二张图片
-            //为所有超链接都绑定单击响应事件
-            for (var i = 0; i < alla.length; i++) {
-                //为每一个超链接添加一个num属性
-                alla[i].num = i;
-                alla[i].onclick = function() {
-                    //关闭定时器
-                    clearInterval(timer);
-                    //获取点击超链接的索引,并将其设置为index
-                    index = this.num;
-                    //切换图片,第一张索引为0，left为0，第二张索引为1，left为-447，第三张索引为2，left为-894
-                    //imgList.style.left=-447*index+"px";
-                    //设置选中a
-                    setA();
-                    //使用move函数来切换图片
-                    move(imgList, "left", -447 * index, 20, function() {
-                        //动画结束，开启自动切换
-                        autoChange();
-                    });
-                };
-            }
-            //自动切换图片
-            autoChange();
-            //创建一个方法用来设置选中的a
-            function setA() {
-                //判断当前索引是否是最后一张图片
-                if (index >= imgarr.length - 1) { //则将index设置为0
-                    index = 0;
-                    //此时显示的是最后一张图片，而最后一张图片和第一张是一样的通过CSS将最后一张切换成第一张
-                    imgList.style.left = 0;
 
-                }
-                //遍历所有的a并将所有的背景颜色都设置为红色
-                for (var i = 0; i < alla.length; i++) {
-                    alla[i].style.backgroundColor = "";
-                }
-                //将选中的a设置为黑色
-                alla[index].style.backgroundColor = "#000";
-            };
-            var timer;
-            //创建一个函数，用来开启自动切换图片
-            function autoChange() {
-                //开启一个定时器用来定时切换图片
-                timer = setInterval(function() {
-                    //使索引自增
-                    index++;
-                    index = index % imgarr.length;
-                    //执行动画,切换图片
-                    move(imgList, "left", -447 * index, 20, function() {
-                        //修改导航按钮
-                        setA();
-                    });
-                }, 3000);
-            }
-        };
-    </script>
 </head>
 
-<body>
-    <!--创建一个外部的div，来作为大的容器-->
-    <div id="outer">
-        <!--创建一个ul，用于放置图片-->
-        <ul id="imgList">
-            <li><img src="img/002.jpg"></li>
-            <li><img src="img/003.jpg"></li>
-            <li><img src="img/004.jpg"></li>
-            <li><img src="img/005.jpg"></li>
-            <li><img src="img/006.jpg"></li>
-            <li><img src="img/002.jpg"></li>
-        </ul>
-        <!--创建导航按钮-->
-        <div id="navdiv">
-            <a href="javascript:;"></a>
-            <a href="javascript:;"></a>
-            <a href="javascript:;"></a>
-            <a href="javascript:;"></a>
-            <a href="javascript:;"></a>
-        </div>
+<body style="background: #738192;">
+
+    <div style="width: 1903px; height: 1px; display: block; overflow: visible; position: absolute; left: 1px; z-index: 100000; top: 126px;">
+
+        <span style="color: rgb(239, 239, 239); font-size: 14px; display: block; position: absolute; cursor: default; pointer-events: none; z-index: 100000; opacity: 0.26; top: 416px; left: 1041.41px;">❅</span>
+        <span style="color: rgb(239, 239, 239); font-size: 22px; display: block; position: absolute; cursor: default; pointer-events: none; z-index: 100000; opacity: 0.95; top: 347px; left: 271.67px;">❅</span>
+        <!-- <span style="color: rgb(239, 239, 239); font-size: 22px; display: block; position: absolute; cursor: default; pointer-events: none; z-index: 100000; opacity: 0.95; top: 347px; left: 1585.17px;">❅</span>
+        <span style="color: rgb(239, 239, 239); font-size: 17px; display: block; position: absolute; cursor: default; pointer-events: none; z-index: 100000; opacity: 1; top: 342px; left: 20.7412px;">❅</span>
+        <span style="color: rgb(239, 239, 239); font-size: 17px; display: block; position: absolute; cursor: default; pointer-events: none; z-index: 100000; opacity: 1; top: 328px; left: 624.129px;">❅</span>
+        <span style="color: rgb(239, 239, 239); font-size: 11px; display: block; position: absolute; cursor: default; pointer-events: none; z-index: 100000; opacity: 1; top: 326px; left: 514.146px;">❅</span>
+        <span style="color: rgb(239, 239, 239); font-size: 15px; display: block; position: absolute; cursor: default; pointer-events: none; z-index: 100000; opacity: 1; top: 311px; left: 1724.57px;">❅</span>
+        <span style="color: rgb(239, 239, 239); font-size: 11px; display: block; position: absolute; cursor: default; pointer-events: none; z-index: 100000; opacity: 1; top: 300px; left: 133.596px;">❅</span>
+        <span style="color: rgb(239, 239, 239); font-size: 11px; display: block; position: absolute; cursor: default; pointer-events: none; z-index: 100000; opacity: 1; top: 296px; left: 1496px;">❅</span>
+        <span style="color: rgb(239, 239, 239); font-size: 18px; display: block; position: absolute; cursor: default; pointer-events: none; z-index: 100000; opacity: 1; top: 280px; left: 642.727px;">❅</span>
+        <span style="color: rgb(239, 239, 239); font-size: 16px; display: block; position: absolute; cursor: default; pointer-events: none; z-index: 100000; opacity: 1; top: 277px; left: 53.9944px;">❅</span>
+        <span style="color: rgb(239, 239, 239); font-size: 27px; display: block; position: absolute; cursor: default; pointer-events: none; z-index: 100000; opacity: 0.49; top: 393px; left: 1476.55px;">❅</span>
+        <span style="color: rgb(239, 239, 239); font-size: 19px; display: block; position: absolute; cursor: default; pointer-events: none; z-index: 100000; opacity: 1; top: 191px; left: 709.249px;">❅</span>
+        <span style="color: rgb(239, 239, 239); font-size: 10px; display: block; position: absolute; cursor: default; pointer-events: none; z-index: 100000; opacity: 1; top: 295px; left: 963.943px;">❅</span>
+        <span style="color: rgb(239, 239, 239); font-size: 22px; display: block; position: absolute; cursor: default; pointer-events: none; z-index: 100000; opacity: 1; top: 239px; left: 1332.19px;">❅</span>
+        <span style="color: rgb(239, 239, 239); font-size: 12px; display: block; position: absolute; cursor: default; pointer-events: none; z-index: 100000; opacity: 1; top: 247px; left: 1647.89px;">❅</span>
+        <span style="color: rgb(239, 239, 239); font-size: 10px; display: block; position: absolute; cursor: default; pointer-events: none; z-index: 100000; opacity: 1; top: 148px; left: 1132.04px;">❅</span>
+        <span style="color: rgb(239, 239, 239); font-size: 22px; display: block; position: absolute; cursor: default; pointer-events: none; z-index: 100000; opacity: 1; top: 206px; left: 1125.05px;">❅</span>
+        <span style="color: rgb(239, 239, 239); font-size: 13px; display: block; position: absolute; cursor: default; pointer-events: none; z-index: 100000; opacity: 1; top: 129px; left: 1666.19px;">❅</span>
+        <span style="color: rgb(239, 239, 239); font-size: 27px; display: block; position: absolute; cursor: default; pointer-events: none; z-index: 100000; opacity: 1; top: 103px; left: 1281px;">❅</span>
+        <span style="color: rgb(239, 239, 239); font-size: 22px; display: block; position: absolute; cursor: default; pointer-events: none; z-index: 100000; opacity: 1; top: 182px; left: 733.887px;">❅</span>
+        <span style="color: rgb(239, 239, 239); font-size: 29px; display: block; position: absolute; cursor: default; pointer-events: none; z-index: 100000; opacity: 1; top: 172px; left: 489.29px;">❅</span>
+        <span style="color: rgb(239, 239, 239); font-size: 23px; display: block; position: absolute; cursor: default; pointer-events: none; z-index: 100000; opacity: 1; top: 103px; left: 1017.17px;">❅</span>
+        <span style="color: rgb(239, 239, 239); font-size: 18px; display: block; position: absolute; cursor: default; pointer-events: none; z-index: 100000; opacity: 1; top: 166px; left: 1281.73px;">❅</span>
+        <span style="color: rgb(239, 239, 239); font-size: 12px; display: block; position: absolute; cursor: default; pointer-events: none; z-index: 100000; opacity: 1; top: 109px; left: 543.005px;">❅</span>
+        <span style="color: rgb(239, 239, 239); font-size: 17px; display: block; position: absolute; cursor: default; pointer-events: none; z-index: 100000; opacity: 1; top: 80px; left: 1655.87px;">❅</span>
+        <span style="color: rgb(239, 239, 239); font-size: 19px; display: block; position: absolute; cursor: default; pointer-events: none; z-index: 100000; opacity: 1; top: 6px; left: 1458.46px;">❅</span>
+        <span style="color: rgb(239, 239, 239); font-size: 21px; display: block; position: absolute; cursor: default; pointer-events: none; z-index: 100000; opacity: 1; top: -6px; left: 1024.18px;">❅</span>
+        <span style="color: rgb(239, 239, 239); font-size: 24px; display: block; position: absolute; cursor: default; pointer-events: none; z-index: 100000; opacity: 1; top: -22px; left: 979.808px;">❅</span>
+        <span style="color: rgb(239, 239, 239); font-size: 28px; display: block; position: absolute; cursor: default; pointer-events: none; z-index: 100000; opacity: 1; top: -31px; left: 1115.9px;">❅</span> -->
     </div>
+    <script>
+        var index = document.querySelectorAll("span")
+        console.log(index);
+
+        // console.log(topValue);
+
+        for (i = 0; i < index.length; i++) {
+
+            topValue = Number(index[i].style.top.replace("px", ""))
+            console.log(topValue);
+            index[i].style.top = topValue + parseInt(Math.random() * 10) + "px"
+                // index[i].style.top = topValue + 1
+            console.log(index[i].style.top);
+
+        }
+    </script>
 </body>
 
 </html>
