@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Play, "微软雅黑", "Microsoft YaHei UI", "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    /* background-color: #e1e5eb; */
+    background-color: #f0f2f7;
+    color: #738192;
+    -webkit-font-smoothing: antialiased;
+    cursor: url("../img/shubiao.ico"), default;
+}
+
+body {
+    background: url("../img/left-bottom.jpg") no-repeat fixed bottom left, url("../img/right-top.jpg") no-repeat fixed top right, #f0f2f7;
+    min-height: calc(100vh + 20px);
+    overflow: hidden scroll;
+}
+
+.w {
+    width: cal(100% - 80px);
+    max-width: 1680px;
+    margin: 0 auto;
+}
+
+li {
+    list-style-type: none;
+}
+
+em,
+i {
+    font-style: normal;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    color: #738192;
+}
+
+a:hover {
+    cursor: url("../img/shubiao2.ico"), default;
+    color: #20a0ff;
+}
+
+.hide,
+.none {
+    display: none;
+}
+
+.clearFix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: "";
+    height: 0
+}
+
+.clearFix {
+    *zoom: 1
+}
+
+.marginFix {
+    margin-top: 79px;
+}
+
+.floatLeft {
+    float: left;
+}

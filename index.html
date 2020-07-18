@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
     <link rel="stylesheet" type="text/css" href="css/comment.css">
     <link href="https://cdn.bootcss.com/font-awesome/5.13.0/css/all.css" rel="stylesheet">
-    <script src="js/main.js"></script>
-
-
+    <!-- <script src="js/main.js"></script> -->
 </head>
 
 <body>
@@ -22,22 +21,20 @@
             <div class="searchButton"><i class="fa fa-search"></i></div>
             <div class="navBar">
                 <ul>
-                    <li><a href="#"><i class="fa fa-home"></i> 首页</a></li>
-                    <li><a href="#"><i class="fa fa-footPrint"></i> 足迹</a></li>
+                    <li><a href="index.html"><i class="fa fa-home"></i> 首页</a></li>
+                    <li><a href="second.html"><i class="fa fa-footPrint"></i> 足迹</a></li>
                     <li><a href="#"><i class="fa fa-message"></i> 留言板</a></li>
                     <li><a href="#"><i class="fa fa-friendship"></i> 友情链接</a></li>
                     <li><a href="#"><i class="fa fa-host"></i> 关于博主</a></li>
                 </ul>
             </div>
         </header>
-        <!-- 导航栏 end  -->
-        <!-- 阴影 -->
         <div class="shadow"></div>
-        <!-- 阴影 -->
     </div>
+    <!-- 导航栏 end  -->
 
     <!-- 轮播图 start -->
-    <div class="box w">
+    <div class="box w marginFix">
         <!-- current -->
         <div class="current">
             <div class="boxLeft">
@@ -46,7 +43,7 @@
                 <div class="readMore"><a href="#"><i class="fa fa-arrow-right"></i> 阅读全文</a></div>
             </div>
             <div class="boxRight">
-                <a href="#" class="card"></a>
+                <a href="#" class="card" style="background-image: url(upload/001.png);"></a>
             </div>
         </div>
         <!-- past0 -->
@@ -57,7 +54,7 @@
                 <div class="readMore"><a href="#"><i class="fa fa-arrow-right"></i> 阅读全文</a></div>
             </div>
             <div class="boxRight">
-                <a href="#" class="card"></a>
+                <a href="#" class="card" style="background-image: url(upload/002.png);"></a>
             </div>
         </div>
         <!-- past1 -->
@@ -68,7 +65,7 @@
                 <div class="readMore"><a href="#"><i class="fa fa-arrow-right"></i> 阅读全文</a></div>
             </div>
             <div class="boxRight">
-                <a href="#" class="card"></a>
+                <a href="#" class="card" style="background-image: url(upload/003.png);"></a>
             </div>
         </div>
         <!-- past2 -->
@@ -79,7 +76,7 @@
                 <div class="readMore"><a href="#"><i class="fa fa-arrow-right"></i> 阅读全文</a></div>
             </div>
             <div class="boxRight">
-                <a href="#" class="card"></a>
+                <a href="#" class="card" style="background-image: url(upload/004.png);"></a>
             </div>
         </div>
         <!-- future2 -->
@@ -90,7 +87,7 @@
                 <div class="readMore"><a href="#"><i class="fa fa-arrow-right"></i> 阅读全文</a></div>
             </div>
             <div class="boxRight">
-                <a href="#" class="card"></a>
+                <a href="#" class="card" style="background-image: url(upload/005.png);"></a>
             </div>
         </div>
         <!-- future1 -->
@@ -101,7 +98,7 @@
                 <div class="readMore"><a href="#"><i class="fa fa-arrow-right"></i> 阅读全文</a></div>
             </div>
             <div class="boxRight">
-                <a href="#" class="card"></a>
+                <a href="#" class="card" style="background-image: url(upload/006.png);"></a>
             </div>
         </div>
         <!-- future0 -->
@@ -112,13 +109,15 @@
                 <div class="readMore"><a href="#"><i class="fa fa-arrow-right"></i> 阅读全文</a></div>
             </div>
             <div class="boxRight">
-                <a href="#" class="card"></a>
+                <a href="#" class="card" style="background-image: url(upload/007.png);"></a>
             </div>
         </div>
+        <div class="boxShadow" style="background-image: url(upload/001.png);"></div>
     </div>
     <script>
         var cards = document.querySelectorAll(".card");
         var box = document.querySelectorAll(".boxRight");
+
         // console.log(cards);
         var a = 0;
         var b = 1;
@@ -142,7 +141,8 @@
         box[e].style.zIndex = "1";
         box[f].style.zIndex = "2";
         box[g].style.zIndex = "3";
-
+        // var url = cards[a].style.backgroundImage;
+        // console.log(url);
 
         var myVar = setInterval(function() {
             myTimer()
@@ -208,6 +208,10 @@
             box[e].style.zIndex = "1";
             box[f].style.zIndex = "2";
             box[g].style.zIndex = "3";
+            var url = cards[a].style.backgroundImage;
+            var boxShadow = document.querySelector(".boxShadow").style.backgroundImage = url
+                // console.log(boxShadow);
+
         }
     </script>
     <!-- 轮播图 end -->
@@ -242,31 +246,31 @@
 
     <!-- 文章卡片 start -->
     <div class="main w clearFix">
-        <div class="articleCards">
+        <div class="articleCards floatLeft clearFix">
             <ul class="cardsList clearFix">
                 <li>
-                    <a href="#"></a>
+                    <a href="#" style="background-image: url(upload/001.png);"></a>
                 </li>
                 <li>
-                    <a href="#"></a>
+                    <a href="#" style="background-image: url(upload/002.png);"></a>
                 </li>
                 <li>
-                    <a href="#"></a>
+                    <a href="#" style="background-image: url(upload/003.png);"></a>
                 </li>
                 <li>
-                    <a href="#"></a>
+                    <a href="#" style="background-image: url(upload/004.png);"></a>
                 </li>
                 <li>
-                    <a href="#"></a>
+                    <a href="#" style="background-image: url(upload/005.png);"></a>
                 </li>
                 <li>
-                    <a href="#"></a>
+                    <a href="#" style="background-image: url(upload/006.png);"></a>
                 </li>
                 <li>
-                    <a href="#"></a>
+                    <a href="#" style="background-image: url(upload/007.png);"></a>
                 </li>
                 <li>
-                    <a href="#"></a>
+                    <a href="#" style="background-image: url(upload/008.png);"></a>
                 </li>
             </ul>
             <div class="more">
@@ -315,13 +319,13 @@
                     <li>
                         <div class="moodDate"><span>2099-7-15 16:00</span></div>
                         <div class="moodBody">
-                            <p>穷不可怕,知道自己有多穷才可怕。</p>
+                            <p>穷不可怕，知道自己有多穷才可怕。</p>
                         </div>
                     </li>
                     <li>
                         <div class="moodDate"><span>2099-7-15 16:00</span></div>
                         <div class="moodBody">
-                            <p>农夫山泉有点甜,不爱大虾有点悬。</p>
+                            <p>农夫山泉有点甜，不爱大虾有点悬。</p>
                         </div>
                     </li>
                 </ul>
